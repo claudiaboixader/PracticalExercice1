@@ -8,7 +8,6 @@
 (adjacent ?d1 ?d2)
 (rescued ?p)
 (drone-empty)
-(carrying ?p)
 )
 (:action move
     :parameters (?d1 ?d2)
@@ -17,12 +16,12 @@
 )
 (:action pick-up
     :parameters (?p ?d)
-    :precondition (and (person-location ?p ?d) (drone-location ?d) (drone-empty) (not (obstacle ?d)))
-    :effect (and (not (drone-empty)) (not (person-location ?p ?d)) (carrying ?p))
+    :precondition (and (person-location ?p ?d) (drone-location ?d) (drone-empty) (not (obstacle ?d)) (not (rescued ?p)))
+    :effect (and (not (drone-empty)) (drone-location ?d))
 )
 (:action drop-off
     :parameters (?p ?d)
-    :precondition (and (drone-location ?d) (safe-zone ?d) (carrying ?p) (not (drone-empty)) (not (obstacle ?d)))
-    :effect (and (drone-empty) (rescued ?p) (not (carrying ?p)))
+    :precondition (and (drone-location ?d) (safe-zone ?d) (not (drone-empty)) (not (obstacle ?d)))
+    :effect (and (drone-empty) (rescued ?p))
 )
 )

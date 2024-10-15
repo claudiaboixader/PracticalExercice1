@@ -4,7 +4,9 @@
     l00 l01 l02 l03 l10 l11 l12 l13 l20 l21 l22 l23 l30 l31 l32 l33)
     (:init (drone-location l00) 
     (person-location p1 l03) (person-location p2 l10) (person-location p3 l21)
+    (safe-zone l31)
     (drone-empty)
+    (rescued p3)
     ;; grid
     ;; l00 l01 l02 l03
     ;; l10 l11 l12 l13
@@ -43,5 +45,5 @@
     (adjacent l22 l32) (adjacent l32 l22)
     (adjacent l23 l33) (adjacent l33 l23)
     )
-    (:goal (and (rescued p1)))
+    (:goal (and (rescued p1) (rescued p2)))
 )
