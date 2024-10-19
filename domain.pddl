@@ -4,7 +4,6 @@
 (person-location ?p ?d)
 (obstacle ?d)
 (safe-zone ?d)
-(safe-zone-capacity ?m)
 (adjacent ?d1 ?d2)
 (rescued ?p)
 (drone-empty)
@@ -17,7 +16,7 @@
 (:action pick-up
     :parameters (?p ?d)
     :precondition (and (person-location ?p ?d) (drone-location ?d) (drone-empty) (not (obstacle ?d)) (not (rescued ?p)))
-    :effect (and (not (drone-empty)) (drone-location ?d))
+    :effect (and (not (drone-empty)) (drone-location ?d) (not (person-location ?p ?d)))
 )
 (:action drop-off
     :parameters (?p ?d)
