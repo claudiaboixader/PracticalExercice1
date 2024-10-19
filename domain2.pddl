@@ -1,4 +1,4 @@
-(define (domain drone)
+(define (domain drone2)
 (:requirements :strips :equality :negative-preconditions)
 (:predicates 
 (drone-location ?d)

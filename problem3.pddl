@@ -1,6 +1,6 @@
 (define (problem problem3)
 
-    (:domain drone) 
+    (:domain drone2) 
     (:objects 
     p1 p2 p3
     l00 l01 l02 l03 
@@ -12,7 +12,7 @@
     (drone-location l00) 
     (person-location p1 l03) (person-location p2 l10) (person-location p3 l21)
     (obstacle l12) (obstacle l22) (obstacle l33)
-    (safe-zone l31)
+    (safe-zone l31) (safe-zone l22)
     (freespot l31 s1) (freespot l31 s2) (freespot l31 s3)
     (drone-empty)
 

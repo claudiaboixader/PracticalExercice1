@@ -1,6 +1,6 @@
 (define (problem problem4)
 
-    (:domain drone) 
+    (:domain drone2) 
     (:objects 
     p1 p2 p3 p4
     l00 l01 l02 l03 
