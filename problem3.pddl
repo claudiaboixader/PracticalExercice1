@@ -10,10 +10,13 @@
     s1 s2 s3)
     (:init 
     (drone-location l00) 
-    (person-location p1 l03) (person-location p2 l10) (person-location p3 l21)
-    (obstacle l12) (obstacle l22) (obstacle l33)
-    (safe-zone l31) (safe-zone l22)
-    (freespot l31 s1) (freespot l31 s2) (freespot l31 s3)
+    (person-location p1 l33) (person-location p2 l01) (person-location p3 l10
+        
+    )
+    (obstacle l20) (obstacle l12) (obstacle l31)
+    (safe-zone l30) (safe-zone l03)
+    (freespot l03 s1) (freespot l03 s2) (freespot l03 s3)
+    (freespot l30 s1) (freespot l30 s2) (freespot l30 s3)
     (drone-empty)
 
     ;; horizontal adjacencies
