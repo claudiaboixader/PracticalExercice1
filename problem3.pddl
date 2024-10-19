@@ -10,9 +10,7 @@
     s1 s2 s3)
     (:init 
     (drone-location l00) 
-    (person-location p1 l33) (person-location p2 l01) (person-location p3 l10
-        
-    )
+    (person-location p1 l33) (person-location p2 l01) (person-location p3 l10)
     (obstacle l20) (obstacle l12) (obstacle l31)
     (safe-zone l30) (safe-zone l03)
     (freespot l03 s1) (freespot l03 s2) (freespot l03 s3)
